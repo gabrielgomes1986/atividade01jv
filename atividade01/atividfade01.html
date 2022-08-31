@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Ted js</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet " type="text/css " href="ted.css" />
+    <script>
+       
+       var altura = [1.22, 1.62, 1.93, 1.73, 1.84, 1.74, 1.65, 2.10, 2.03, 1.95, 1.91, 1.50, 1.40, 2.12, 2.01];
+        var genero = ["M", "F", "M", "F", "M", "F", "M", "F", "M", "F", "M", "F", "M", "F", "M"];
+ 
+ 
+        function alturaMaior(altura) {
+            var maiorAltura = altura[0];
+            for (let i = 0; i < altura.length; i++) {
+                if (altura[i] > maiorAltura) {
+                    maiorAltura = altura[i];
+                }
+            }
+            return maiorAltura;
+        }
+ 
+        function alturaMenor(altura) {
+            var menorAltura = altura[0];
+            for (let i = 0; i < altura.length; i++) {
+                if (altura[i] < menorAltura[i]) {
+                    menor = altura[i];
+                }
+            }
+            return menorAltura;
+        }
+ 
+        function mediaHomens(genero, altura) {
+            var soma = 0;
+            var media = 0;
+            for (let i = 0; i < genero.length; i++) {
+                if (genero[i] === "M") {
+                    soma += altura[i];
+                    media++;
+                }
+            }
+            return (soma / media);
+        }
+ 
+        function qtdeMulheres(genero) {
+            var mulheres = 0;
+            for (let i = 0; i < genero.length; i++) {
+                if (genero[i] === "F") {
+                    mulheres++;
+                }
+            }
+            return mulheres;
+        }
+ 
+        alert("A Maior Altura é " + alturaMaior(altura) + " Metros.");
+        alert("A Menor Altura é " + alturaMenor(altura) + " Metros.");
+        alert("A Média de Altura dos homens é de " + mediaHomens(genero, altura).toFixed(2) + " Metros.");
+        alert("A Quantidade é de " + qtdeMulheres(genero) + " Mulheres.");
+    </script>
+ 
+</head>
+ 
+<body>
+    <a href="https://www.w3schools.com/">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        IR PARA ESCOLA
+    </a>
+    <a href="https://www.w3schools.com/">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        IR PARA ESCOLA
+    </a>
+    <a href="https://www.w3schools.com/">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        IR PARA ESCOLA
+    </a>
+</body>
+ 
+ 
+</html>
